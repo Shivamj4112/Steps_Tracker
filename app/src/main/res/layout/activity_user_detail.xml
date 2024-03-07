@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.UserDetailActivity">
+
+    <FrameLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_gravity="start|center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 / 6"
+            android:textColor="@color/titleTextColor"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/apompadour_bold_sample"
+            android:layout_gravity="end|center"/>
+
+    </FrameLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/top"/>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:layout_alignParentBottom="true">
+
+
+        <Button
+            android:id="@+id/btSkip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/skip"
+            android:backgroundTint="#F5EEFF"
+            android:paddingVertical="@dimen/_15sdp"
+            android:textSize="@dimen/_14ssp"
+            android:layout_weight="1"
+            android:fontFamily="@font/apompadour_bold_sample"
+            android:textColor="@color/app_color"/>
+
+        <View
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/btContinue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/continues"
+            android:layout_weight="1"
+            android:backgroundTint="@color/app_color"
+            android:paddingVertical="@dimen/_15sdp"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="@font/apompadour_bold_sample"
+            android:textColor="@color/lightest_app_color"/>
+    </LinearLayout>
+
+</RelativeLayout>
