@@ -1,60 +1,50 @@
 package com.example.stepstracker.view.fragment.userDetail
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.stepstracker.R
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import com.example.stepstracker.databinding.FragmentAgeBinding
+import com.shawnlin.numberpicker.NumberPicker
+import java.util.Locale
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [AgeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class AgeFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var binding : FragmentAgeBinding
+    private val dividerValue = 28
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_age, container, false)
-    }
+        binding = FragmentAgeBinding.inflate(layoutInflater)
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment AgeFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            AgeFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+        binding.apply {
+
+//            var previousValue = -1 // Variable to store the previous value
+//
+//            numberPicker.setOnValueChangedListener { picker, oldVal, newVal ->
+//                if (newVal != previousValue) {
+//                    // Only handle the callback if the new value is different from the previous value
+//                    Toast.makeText(requireContext(), newVal.toString(), Toast.LENGTH_SHORT).show()
+//                    previousValue = newVal // Update the previous value
+//                }
+//            }
+            numberPicker.setOnScrollListener { picker, scrollState ->
+                if (scrollState == NumberPicker.OnScrollListener.SCROLL_STATE_IDLE) {
+                    Toast.makeText(requireContext(), picker.value.toString(), Toast.LENGTH_SHORT).show()
                 }
             }
+
+        }
+
+
+        return binding.root
     }
+
 }

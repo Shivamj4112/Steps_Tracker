@@ -11,6 +11,7 @@ lottie = "6.4.0"
 material = "1.11.0"
 activity = "1.8.2"
 constraintlayout = "2.1.4"
+numberPicker = "2.4.13"
 sdpAndroid = "1.1.0"
 sspAndroid = "1.1.0"
 googleServices = "4.4.1"
@@ -28,6 +29,7 @@ lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+number-picker = { module = "io.github.ShawnLin013:number-picker", version.ref = "numberPicker" }
 sdp-android = { module = "com.intuit.sdp:sdp-android", version.ref = "sdpAndroid" }
 ssp-android = { group = "com.intuit.ssp", name = "ssp-android", version.ref = "sspAndroid" }
 google-services = { group = "com.google.gms", name = "google-services", version.ref = "googleServices" }

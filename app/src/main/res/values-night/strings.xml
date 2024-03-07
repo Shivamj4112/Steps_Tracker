@@ -36,4 +36,11 @@
     <string name="lifestyle">Lifestyle?</string>
     <string name="tell_us_about_your_daily_routine">Tell us about your daily routine.</string>
     <string name="back">Back</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="how">How</string>
+    <string name="old">Old</string>
+    <string name="_1_6">1 / 6</string>
+    <string name="number_picker_formatter" />
+    <string name="apompadour_text_sample" />
 </resources>

@@ -8,6 +8,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.stepstracker.view.fragment.intro.IntroScreen1Fragment
 import com.example.stepstracker.view.fragment.intro.IntroScreen2Fragment
 import com.example.stepstracker.view.fragment.intro.IntroScreen3Fragment
+import com.example.stepstracker.view.fragment.userDetail.AgeFragment
 import com.example.stepstracker.view.fragment.userDetail.GenderFragment
 import com.example.stepstracker.view.fragment.userDetail.SedentaryFragment
 
@@ -20,6 +21,7 @@ class DetailViewPager(fragmentActivity: FragmentActivity) : FragmentStateAdapter
         return when(position) {
             0 -> GenderFragment()
             1 -> SedentaryFragment()
+            2 -> AgeFragment()
             // Add cases for other fragments
             else -> GenderFragment() // Default case
         }

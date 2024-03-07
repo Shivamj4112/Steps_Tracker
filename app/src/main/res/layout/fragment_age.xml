@@ -1,14 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context=".view.fragment.userDetail.AgeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:gravity="center">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/how"
+            android:textColor="@color/titleTextColor"
+            android:fontFamily="@font/apompadour_bold_sample"
+            android:textSize="@dimen/_25sdp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/old"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textColor="@color/app_color"
+            android:fontFamily="@font/apompadour_bold_sample"
+            android:textSize="@dimen/_25sdp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Are You?"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textColor="@color/titleTextColor"
+            android:fontFamily="@font/apompadour_bold_sample"
+            android:textSize="@dimen/_25sdp"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Share your age with us."
+        android:textColor="@color/bodyTextColor"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+
+    <com.shawnlin.numberpicker.NumberPicker
+        android:id="@+id/number_picker"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_400sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:np_width="64dp"
+        app:np_height="@dimen/_150sdp"
+        app:np_dividerColor="@color/app_color"
+        app:np_max="100"
+        app:np_min="10"
+        android:layout_gravity="center"
+        app:np_selectedTextColor="@color/app_color"
+        app:np_selectedTextSize="@dimen/_24ssp"
+        app:np_textColor="@color/black"
+        app:np_textSize="@dimen/_18ssp"
+        app:np_wheelItemCount="11"
+        app:np_selectedTypeface="@string/apompadour_text_sample"
+        app:np_value="18"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="years"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/apompadour_text_sample"
+        android:layout_marginStart="-60dp"
+        android:textSize="@dimen/_14ssp"/>
+
+</LinearLayout>
+
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Years"/>-->
+
+
+</LinearLayout>

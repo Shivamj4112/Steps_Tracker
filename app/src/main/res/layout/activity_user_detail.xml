@@ -20,9 +20,10 @@
             android:src="@drawable/ic_arrow_back" />
 
         <TextView
+            android:id="@+id/tvNumIndicator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1 / 6"
+            android:text="@string/_1_6"
             android:textColor="@color/titleTextColor"
             android:layout_marginEnd="@dimen/_20sdp"
             android:textSize="@dimen/_14sdp"

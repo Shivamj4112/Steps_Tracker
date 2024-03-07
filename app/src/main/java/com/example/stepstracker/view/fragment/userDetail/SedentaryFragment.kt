@@ -18,7 +18,27 @@ class SedentaryFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentSedentaryBinding.inflate(layoutInflater)
 
+        binding.apply {
 
+            btYes.setOnClickListener {
+
+                btYes.setTextColor(resources.getColor(R.color.white))
+                btYes.setBackgroundColor(resources.getColor(R.color.app_color))
+
+                btNo.setTextColor(resources.getColor(R.color.black))
+                btNo.setBackgroundColor(resources.getColor(R.color.lightest_app_color))
+            }
+
+            btNo.setOnClickListener {
+
+                btNo.setTextColor(resources.getColor(R.color.white))
+                btNo.setBackgroundColor(resources.getColor(R.color.app_color))
+
+                btYes.setTextColor(resources.getColor(R.color.black))
+                btYes.setBackgroundColor(resources.getColor(R.color.lightest_app_color))
+            }
+
+        }
 
         return binding.root
     }

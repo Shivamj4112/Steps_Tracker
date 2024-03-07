@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".view.fragment.userDetail.SedentaryFragment">
 
@@ -37,7 +38,6 @@
         android:layout_marginStart="@dimen/_10sdp"
         android:textColor="@color/titleTextColor"
         android:layout_gravity="center"
-        android:layout_marginTop="@dimen/_10sdp"
         android:fontFamily="@font/apompadour_bold_sample"
         android:textSize="@dimen/_25sdp"/>
 
@@ -52,10 +52,46 @@
 
 
     <ImageView
-        android:layout_width="@dimen/_250sdp"
-        android:layout_height="@dimen/_250sdp"
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_210sdp"
         android:layout_gravity="center"
-        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:src="@drawable/img_seden"/>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:layout_marginVertical="@dimen/_15sdp"
+        android:gravity="center">
+
+            <Button
+                android:id="@+id/btNo"
+                android:layout_width="@dimen/_65sdp"
+                android:layout_height="@dimen/_65sdp"
+                android:text="@string/no"
+                android:textSize="@dimen/_16sdp"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/lightest_app_color"
+                android:fontFamily="@font/apompadour_text_sample"/>
+
+
+        <View
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/btYes"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_65sdp"
+            android:textSize="@dimen/_16sdp"
+            android:textColor="@color/black"
+            android:text="@string/yes"
+            android:backgroundTint="@color/lightest_app_color"
+            android:fontFamily="@font/apompadour_text_sample"/>
+
+    </LinearLayout>
 
 </LinearLayout>
