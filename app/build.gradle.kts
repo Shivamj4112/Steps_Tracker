@@ -62,4 +62,7 @@ dependencies {
 
     // Dot Indicator
     implementation(libs.dotsindicator)
+
+    // Rounded ProgressBar
+//    implementation("")
 }
