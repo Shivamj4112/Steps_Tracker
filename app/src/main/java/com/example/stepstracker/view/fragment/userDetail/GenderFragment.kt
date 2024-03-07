@@ -1,27 +1,23 @@
-package com.example.stepstracker.view.fragment
+package com.example.stepstracker.view.fragment.userDetail
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.stepstracker.databinding.FragmentIntroScreen3Binding
+import com.example.stepstracker.R
+import com.example.stepstracker.databinding.FragmentGenderBinding
 
 
-class IntroScreen3Fragment : Fragment() {
-    private lateinit var binding: FragmentIntroScreen3Binding
+class GenderFragment : Fragment() {
 
+    private lateinit var binding : FragmentGenderBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        binding = FragmentIntroScreen3Binding.inflate(inflater, container, false)
-
-
-
-
-
+        binding = FragmentGenderBinding.inflate(layoutInflater)
 
 
 
@@ -30,5 +26,4 @@ class IntroScreen3Fragment : Fragment() {
 
         return binding.root
     }
-
 }
