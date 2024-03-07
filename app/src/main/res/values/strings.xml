@@ -33,4 +33,9 @@
     <string name="select_your">Select Your</string>
     <string name="man">Man</string>
     <string name="female">Female</string>
+    <string name="do_you_live_a">Do You Live a</string>
+    <string name="sedentary">Sedentary</string>
+    <string name="lifestyle">Lifestyle?</string>
+    <string name="tell_us_about_your_daily_routine">Tell us about your daily routine.</string>
+    <string name="back">Back</string>
 </resources>

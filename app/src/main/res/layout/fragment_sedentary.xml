@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.fragment.userDetail.SedentaryFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/do_you_live_a"
+            android:textColor="@color/titleTextColor"
+            android:fontFamily="@font/apompadour_bold_sample"
+            android:textSize="@dimen/_25sdp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sedentary"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textColor="@color/app_color"
+            android:fontFamily="@font/apompadour_bold_sample"
+            android:textSize="@dimen/_25sdp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lifestyle"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:textColor="@color/titleTextColor"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/apompadour_bold_sample"
+        android:textSize="@dimen/_25sdp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tell_us_about_your_daily_routine"
+        android:textColor="@color/bodyTextColor"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+
+    <ImageView
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_250sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:src="@drawable/img_seden"/>
+
+</LinearLayout>
