@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "993648150519",
+    "project_id": "steps-tracker-c0b19",
+    "storage_bucket": "steps-tracker-c0b19.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:993648150519:android:957627fb02133f8b50d0f2",
+        "android_client_info": {
+          "package_name": "com.example.stepstracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKoZJsCygJOA2_FAn1He0gZuYxxKqQOz0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

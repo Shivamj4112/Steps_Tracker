@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="skip">Skip</string>
+    <string name="continues">Continue</string>
+    <string name="trackfit_your_ultimate_step_counter_amp_tracker"><![CDATA[TrackFit - Your Ultimate Step Counter & Tracker]]></string>
+    <string name="track_your_steps_monitor_your_progress_live_route_tracking_insightful_reports_and_detailed_history_and_achieve_your_fitness_goals">Track your steps, monitor your progress, live route tracking, insightful reports, and detailed history, and achieve your fitness goals.</string>
+    <string name="experience_the_thrill_of_tracking_your_steps_in_real_time_with_trackfit_s_live_maps_trackfit_keeps_you_connected_to_your_journey">Experience the thrill, of tracking your steps in real-time with TrackFit\'s live maps. TrackFit keeps you connected to your journey.</string>
+    <string name="discover_your_route_with_live_maps">Discover Your Route with Live Maps</string>
+    <string name="intro3body">Stay informed about your step count, distance traveled, and caloris burned with TrackFit\'s comprehensive reports.</string>
+    <string name="intro3title">Gain Step Insights with Detailed Reports</string>
+    <string name="let_s_get_started">Let\'s Get Started</string>
+    <string name="continue_with_facebook">Continue with Facebook</string>
+    <string name="continue_with_apple">Continue with Apple</string>
+    <string name="let_s_dive_into_your_account">Let\'s dive into your account</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="sign_up">Sign up</string>
+    <string name="login">Login</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="join_trackfit_today">Join TrackFit Today</string>
+    <string name="create_your_account_and_start_tracking_your_steps">Create your account and start tracking your steps.</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="password">Password</string>
+    <string name="terms_amp_conditions"><![CDATA[Terms & Conditions.]]></string>
+    <string name="i_agree_to_trackfit">I agree to TrackFit</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="login_your_account_and_start_tracking_your_steps">Login your account and start tracking your steps.</string>
+    <string name="create_you_account">Create you account?</string>
+</resources>

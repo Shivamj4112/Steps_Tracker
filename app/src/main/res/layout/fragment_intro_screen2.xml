@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.fragment.IntroScreen2Fragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_280sdp"
+        android:background="@drawable/intro_item">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:paddingTop="@dimen/_80sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/introbg" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/apompadour_bold_sample"
+        android:lineSpacingExtra="@dimen/_4sdp"
+        android:text="@string/discover_your_route_with_live_maps"
+        android:textAlignment="center"
+        android:textColor="@color/titleTextColor"
+        android:textSize="@dimen/_20sdp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/apompadour_text_sample"
+        android:lineSpacingExtra="@dimen/_4sdp"
+        android:text="@string/experience_the_thrill_of_tracking_your_steps_in_real_time_with_trackfit_s_live_maps_trackfit_keeps_you_connected_to_your_journey"
+        android:textAlignment="center"
+        android:textColor="@color/bodyTextColor"
+        android:textSize="@dimen/_11sdp" />
+
+
+</LinearLayout>
