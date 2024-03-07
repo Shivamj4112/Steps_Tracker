@@ -1,22 +1,23 @@
-package com.example.stepstracker.view.fragment.intro
+package com.example.stepstracker.view.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.stepstracker.databinding.FragmentIntroScreen1Binding
+import com.example.stepstracker.databinding.FragmentIntroScreen2Binding
 
-class IntroScreen1Fragment : Fragment() {
-    
-    private lateinit var binding: FragmentIntroScreen1Binding
-    
+
+class IntroScreen2Fragment : Fragment() {
+
+    private lateinit var binding: FragmentIntroScreen2Binding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentIntroScreen1Binding.inflate(inflater, container, false)
+        binding = FragmentIntroScreen2Binding.inflate(inflater, container, false)
 
 
 
@@ -30,5 +31,5 @@ class IntroScreen1Fragment : Fragment() {
 
         return binding.root
     }
-    
+
 }

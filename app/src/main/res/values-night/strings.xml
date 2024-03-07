@@ -28,7 +28,4 @@
     <string name="welcome_back">Welcome Back</string>
     <string name="login_your_account_and_start_tracking_your_steps">Login your account and start tracking your steps.</string>
     <string name="create_you_account">Create you account?</string>
-    <string name="select_your">Select Your</string>
-    <string name="man">Man</string>
-    <string name="female">Female</string>
 </resources>

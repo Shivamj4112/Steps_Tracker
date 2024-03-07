@@ -27,6 +27,7 @@ class SignupActivity : AppCompatActivity() {
     private val database = Firebase.database
     private val myRef = database.getReference("Users")
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignupBinding.inflate(layoutInflater)
@@ -39,7 +40,9 @@ class SignupActivity : AppCompatActivity() {
 
             buttonSignup()
             otherCLicks()
+
         }
+
     }
 
     private fun ActivitySignupBinding.otherCLicks() {
@@ -72,12 +75,14 @@ class SignupActivity : AppCompatActivity() {
         ivPassShow.setOnClickListener {
             val cursorPosition = etPassword.selectionStart
             if (count == 0) {
-                etPassword.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+                etPassword.inputType =
+                    InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
                 etPassword.typeface = customFont
                 ivPassShow.setImageResource(R.drawable.ic_pass_show)
                 count = 1
             } else {
-                etPassword.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+                etPassword.inputType =
+                    InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
                 etPassword.typeface = customFont
                 ivPassShow.setImageResource(R.drawable.ic_pass_hide)
                 count = 0
@@ -98,7 +103,8 @@ class SignupActivity : AppCompatActivity() {
                     userRef.child("name").setValue(name)
                     userRef.child("email").setValue(email)
 
-                    intentFinish(UserDetailActivity::class.java)
+                    intentFinish(LoginActivity::class.java)
+
                 } else {
                     toast("Failed to create user")
                 }
