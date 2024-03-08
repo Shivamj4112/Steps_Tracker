@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="What's Your"
+            android:text="Set Your "
             android:textColor="@color/titleTextColor"
             android:fontFamily="@font/apompadour_bold_sample"
             android:textSize="@dimen/_25sdp"/>
@@ -23,65 +23,21 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/weight"
-            android:layout_marginStart="@dimen/_5sdp"
+            android:text="Step Goal"
             android:textColor="@color/app_color"
             android:fontFamily="@font/apompadour_bold_sample"
             android:textSize="@dimen/_25sdp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/questionmark"
-            android:textColor="@color/titleTextColor"
-            android:fontFamily="@font/apompadour_bold_sample"
-            android:textSize="@dimen/_25sdp"/>
-
 
     </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Share your weight with us."
+        android:text="@string/choose_your_daily_step_goal_to_stay_motivated"
         android:textColor="@color/bodyTextColor"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/_10sdp"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/_20sdp">
-
-        <Button
-            android:id="@+id/btKg"
-            android:layout_width="@dimen/_55sdp"
-            android:layout_height="wrap_content"
-            android:text="@string/kg"
-            android:fontFamily="@font/apompadour_text_sample"
-            android:textSize="@dimen/_14ssp"
-            android:backgroundTint="@color/app_color"/>
-
-        <View
-            android:layout_width="@dimen/_20sdp"
-            android:layout_height="match_parent"/>
-
-        <Button
-            android:id="@+id/btLbs"
-            android:layout_width="@dimen/_55sdp"
-            android:layout_height="wrap_content"
-            android:text="@string/lbs"
-            android:textColor="@color/black"
-            android:fontFamily="@font/apompadour_text_sample"
-            android:textSize="@dimen/_14ssp"
-            android:backgroundTint="@color/white"/>
-
-    </LinearLayout>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <LinearLayout
             android:id="@+id/llKg"
@@ -89,17 +45,15 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:visibility="visible"
-            android:layout_marginTop="@dimen/_15sdp">
+            android:layout_marginVertical="@dimen/_20sdp">
 
             <com.shawnlin.numberpicker.NumberPicker
-                android:id="@+id/npKg"
-                android:layout_width="@dimen/_125sdp"
+                android:id="@+id/npSteps"
+                android:layout_width="@dimen/_150sdp"
                 android:layout_height="@dimen/_400sdp"
                 app:np_width="64dp"
                 app:np_height="@dimen/_160sdp"
                 app:np_dividerColor="@color/app_color"
-                app:np_max="300"
-                app:np_min="10"
                 app:np_dividerDistance="@dimen/_55sdp"
                 android:layout_gravity="center"
                 app:np_selectedTextColor="@color/app_color"
@@ -109,56 +63,19 @@
                 app:np_wheelItemCount="11"
                 app:np_typeface="@string/unselected_text"
                 app:np_selectedTypeface="@string/selected_text"
-                app:np_value="40"/>
+                app:np_value="6000"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/kg"
-                android:fontFamily="@font/apompadour_text_sample"
-                android:layout_marginStart="-40dp"
-                android:textSize="@dimen/_14ssp"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/llLbs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:visibility="gone"
-            android:layout_marginTop="@dimen/_20sdp">
-
-            <com.shawnlin.numberpicker.NumberPicker
-                android:id="@+id/npLbs"
-                android:layout_width="@dimen/_125sdp"
-                android:layout_height="@dimen/_400sdp"
-                app:np_width="64dp"
-                app:np_height="@dimen/_160sdp"
-                app:np_dividerColor="@color/app_color"
-                app:np_max="1500"
-                app:np_min="1"
-                app:np_dividerDistance="@dimen/_55sdp"
-                android:layout_gravity="center"
-                app:np_selectedTextColor="@color/app_color"
-                app:np_selectedTextSize="@dimen/_28ssp"
-                app:np_textColor="@color/black"
-                app:np_textSize="@dimen/_20ssp"
-                app:np_wheelItemCount="11"
-                app:np_typeface="@string/unselected_text"
-                app:np_selectedTypeface="@string/selected_text"
-                app:np_value="88"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/lbs"
+                android:text="@string/steps"
                 android:fontFamily="@font/apompadour_text_sample"
                 android:layout_marginStart="-40dp"
                 android:textSize="@dimen/_14ssp"/>
 
         </LinearLayout>
 
-    </FrameLayout>
+
 
 
 

@@ -10,8 +10,10 @@ import com.example.stepstracker.view.fragment.intro.IntroScreen2Fragment
 import com.example.stepstracker.view.fragment.intro.IntroScreen3Fragment
 import com.example.stepstracker.view.fragment.userDetail.AgeFragment
 import com.example.stepstracker.view.fragment.userDetail.GenderFragment
+import com.example.stepstracker.view.fragment.userDetail.GoalsFragment
 import com.example.stepstracker.view.fragment.userDetail.HeightFragment
 import com.example.stepstracker.view.fragment.userDetail.SedentaryFragment
+import com.example.stepstracker.view.fragment.userDetail.WeightFragment
 
 class DetailViewPager(fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity) {
     override fun getItemCount(): Int {
@@ -24,7 +26,8 @@ class DetailViewPager(fragmentActivity: FragmentActivity) : FragmentStateAdapter
             1 -> SedentaryFragment()
             2 -> AgeFragment()
             3 -> HeightFragment()
-            4 -> HeightFragment()
+            4 -> WeightFragment()
+            5 -> GoalsFragment()
             // Add cases for other fragments
             else -> GenderFragment() // Default case
         }
