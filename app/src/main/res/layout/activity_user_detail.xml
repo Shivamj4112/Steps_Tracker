@@ -13,6 +13,7 @@
         android:layout_height="?actionBarSize">
 
         <ImageView
+            android:id="@+id/btBack"
             android:layout_width="@dimen/_24sdp"
             android:layout_height="@dimen/_24sdp"
             android:layout_gravity="start|center"
@@ -50,10 +51,10 @@
 
 
         <Button
-            android:id="@+id/btBack"
+            android:id="@+id/btPrevious"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/back"
+            android:text="@string/previous"
             android:backgroundTint="#F5EEFF"
             android:paddingVertical="@dimen/_15sdp"
             android:textSize="@dimen/_14ssp"

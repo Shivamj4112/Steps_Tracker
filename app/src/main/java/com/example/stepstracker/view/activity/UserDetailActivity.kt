@@ -29,24 +29,19 @@ class UserDetailActivity : AppCompatActivity() {
         setContentView(binding.root)
         statusBarColorWhite()
 
-//        userDetailModel = ViewModelProvider(this)[userDetailModel::class.java]
+
 
         binding.apply {
 
             userPager.adapter = DetailViewPager(this@UserDetailActivity)
             userPager.setUserInputEnabled(false)
 
-//            val gender = GenderFragment()
-//            val sedentary = SedentaryFragment()
-//            val age = AgeFragment()
-//            // Add other fragments similarly
-//
-//            // Set the ViewModel to each fragment
-//            gender.setViewModel(userDetailModel)
-//            sedentary.setViewModel(userDetailModel)
-
 
             btBack.setOnClickListener {
+                finish()
+            }
+
+            btPrevious.setOnClickListener {
                 if (userPager.currentItem > 0) {
                     userPager.currentItem -= 1
                     tvNumIndicator.text = (""+(userPager.currentItem+1)+" / 6")
