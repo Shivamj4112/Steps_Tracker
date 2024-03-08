@@ -19,8 +19,6 @@ import com.example.stepstracker.util.statusBarColorWhite
 class LoginSelectionActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginSelectionBinding
-    private lateinit var sharedPreferences: SharedPreferences
-    private lateinit var editor: SharedPreferences.Editor
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginSelectionBinding.inflate(layoutInflater)
@@ -28,17 +26,18 @@ class LoginSelectionActivity : AppCompatActivity() {
 
         statusBarColorWhite()
 
-        sharedPreferences = getSharedPreferences("Login", MODE_PRIVATE)
-        editor = sharedPreferences.edit()
+        val sharedPreferencesLogin: SharedPreferences = getSharedPreferences("Login", MODE_PRIVATE)
+        val sharedPreferencesSignUp: SharedPreferences = getSharedPreferences("Signup", MODE_PRIVATE)
+        val sharedPreferencesDetail: SharedPreferences = getSharedPreferences("UserDetail", MODE_PRIVATE)
 
 
-        if (sharedPreferences.contains("Useruid")) {
+        if (sharedPreferencesLogin.contains("Useruid")) {
             intentFinish(MainActivity::class.java)
         }
-        else if (sharedPreferences.contains("idDetailFilled")){
+        else if (sharedPreferencesDetail.contains("idDetailFilled")){
             intentFinish(LoginActivity::class.java)
         }
-        else if (sharedPreferences.contains("isAccountCreated")) {
+        else if (sharedPreferencesSignUp.contains("isAccountCreated")) {
             intentFinish(UserDetailActivity::class.java)
         }
 

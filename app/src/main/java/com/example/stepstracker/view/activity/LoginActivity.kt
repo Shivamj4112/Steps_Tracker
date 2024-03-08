@@ -7,9 +7,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import com.example.stepstracker.R
 import com.example.stepstracker.databinding.ActivityLoginBinding
+import com.example.stepstracker.util.gone
 import com.example.stepstracker.util.intentFinish
 import com.example.stepstracker.util.statusBarColorWhite
 import com.example.stepstracker.util.toast
+import com.example.stepstracker.util.visible
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.ktx.database
@@ -19,8 +21,6 @@ class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
     private lateinit var auth : FirebaseAuth
-    private val database = Firebase.database
-    private val myRef = database.getReference("Users")
     private lateinit var sharedPref: SharedPreferences
     private lateinit var editor : SharedPreferences.Editor
 
@@ -35,6 +35,17 @@ class LoginActivity : AppCompatActivity() {
         editor = sharedPref.edit()
 
         binding.apply {
+
+            if (intent.getBooleanExtra("finalLogin",true)){
+                ivBack.gone()
+            }
+            else{
+                ivBack.visible()
+                ivBack.setOnClickListener {
+                    finish()
+                }
+            }
+
 
             buttonClicks()
 
@@ -73,9 +84,6 @@ class LoginActivity : AppCompatActivity() {
         }
 
 
-        ivBack.setOnClickListener {
-            finish()
-        }
         tvSignUp.setOnClickListener {
             intentFinish(SignupActivity::class.java)
         }

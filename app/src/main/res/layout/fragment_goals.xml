@@ -62,8 +62,7 @@
                 app:np_textSize="@dimen/_20ssp"
                 app:np_wheelItemCount="11"
                 app:np_typeface="@string/unselected_text"
-                app:np_selectedTypeface="@string/selected_text"
-                app:np_value="6000"/>
+                app:np_selectedTypeface="@string/selected_text"/>
 
             <TextView
                 android:layout_width="wrap_content"

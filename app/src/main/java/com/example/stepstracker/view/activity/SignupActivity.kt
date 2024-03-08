@@ -1,11 +1,9 @@
 package com.example.stepstracker.view.activity
 
+import android.content.Intent
 import android.content.SharedPreferences
-import android.graphics.Typeface
 import android.os.Bundle
 import android.text.InputType
-import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import com.example.stepstracker.R
@@ -15,20 +13,14 @@ import com.example.stepstracker.util.statusBarColorWhite
 import com.example.stepstracker.util.toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.ValueEventListener
-import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 class SignupActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySignupBinding
-    private lateinit var auth : FirebaseAuth
-    private val database = Firebase.database
-    private val myRef = database.getReference("Users")
-    private lateinit var sharedPref : SharedPreferences
-    private lateinit var editor : SharedPreferences.Editor
+    private lateinit var auth: FirebaseAuth
+    private lateinit var sharedPref: SharedPreferences
+    private lateinit var editor: SharedPreferences.Editor
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,8 +29,6 @@ class SignupActivity : AppCompatActivity() {
         statusBarColorWhite()
 
         initialization()
-
-
 
         binding.apply {
 
@@ -52,7 +42,6 @@ class SignupActivity : AppCompatActivity() {
         sharedPref = getSharedPreferences("Signup", MODE_PRIVATE)
         editor = sharedPref.edit()
     }
-
     private fun ActivitySignupBinding.otherCLicks() {
         ivBack.setOnClickListener {
             finish()
@@ -61,7 +50,6 @@ class SignupActivity : AppCompatActivity() {
             intentFinish(LoginActivity::class.java)
         }
     }
-
     private fun ActivitySignupBinding.buttonSignup() {
         btSignup.setOnClickListener {
 
@@ -74,13 +62,12 @@ class SignupActivity : AppCompatActivity() {
             } else if (!cbTerms.isChecked) {
                 toast("Please check the Terms and Conditions to proceed")
             } else {
-                createAccountUsingEmail(email, password, name)
+                sendData(email, password, name)
             }
 
         }
         passwordHideShow()
     }
-
     private fun ActivitySignupBinding.passwordHideShow() {
         var count = 0
         val customFont = ResourcesCompat.getFont(this@SignupActivity, R.font.apompadour_text_sample)
@@ -102,30 +89,17 @@ class SignupActivity : AppCompatActivity() {
             etPassword.setSelection(cursorPosition)
         }
     }
+    private fun sendData(email: String, password: String, name: String) {
 
-    private fun createAccountUsingEmail(email: String, password: String, name: String) {
-        auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this@SignupActivity) {
+        intentFinish(UserDetailActivity::class.java)
+        finishAffinity()
 
-                if (it.isSuccessful) {
-
-                    val uid = auth.currentUser?.uid.toString()
-                    val userRef = myRef.child(uid)
-
-                    userRef.child("name").setValue(name)
-                    userRef.child("email").setValue(email)
-
-                    intentFinish(UserDetailActivity::class.java)
-
-                    editor.putBoolean("isAccountCreated",true)
-                    editor.apply()
-                } else {
-                    toast("Failed to create user")
-                }
-
-            }.addOnFailureListener(this@SignupActivity) {
-                toast("Error: ${it.message}")
-            }
+        editor.putString("name", name)
+        editor.putString("email", email)
+        editor.putString("password", password)
+        editor.putBoolean("isAccountCreated", true)
+        editor.apply()
     }
+
 
 }

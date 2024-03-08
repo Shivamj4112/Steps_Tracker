@@ -62,28 +62,4 @@
     <string name="previous">Previous</string>
     <string name="male">Male</string>
 
-    <!--String Array-->
-
-    <string-array name="stepsGoals">
-        <item>1000</item>
-        <item>1500</item>
-        <item>2000</item>
-        <item>2500</item>
-        <item>3000</item>
-        <item>3500</item>
-        <item>4000</item>
-        <item>4500</item>
-        <item>5000</item>
-        <item>5500</item>
-        <item>6000</item>
-        <item>6500</item>
-        <item>7000</item>
-        <item>7500</item>
-        <item>8000</item>
-        <item>8500</item>
-        <item>9000</item>
-        <item>9500</item>
-        <item>10000</item>
-    </string-array>
-
 </resources>
