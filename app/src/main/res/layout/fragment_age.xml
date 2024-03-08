@@ -53,14 +53,13 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center">
-
+    android:gravity="center"
+    android:layout_marginTop="@dimen/_20sdp">
 
     <com.shawnlin.numberpicker.NumberPicker
         android:id="@+id/number_picker"
         android:layout_width="@dimen/_150sdp"
         android:layout_height="@dimen/_400sdp"
-        android:layout_marginTop="@dimen/_20sdp"
         app:np_width="64dp"
         app:np_height="@dimen/_150sdp"
         app:np_dividerColor="@color/app_color"
@@ -68,18 +67,18 @@
         app:np_min="10"
         android:layout_gravity="center"
         app:np_selectedTextColor="@color/app_color"
-        app:np_selectedTextSize="@dimen/_24ssp"
+        app:np_selectedTextSize="@dimen/_28ssp"
         app:np_textColor="@color/black"
-        app:np_textSize="@dimen/_18ssp"
+        app:np_textSize="@dimen/_20ssp"
         app:np_wheelItemCount="11"
-        app:np_selectedTypeface="@string/apompadour_text_sample"
+        app:np_typeface="@string/unselected_text"
+        app:np_selectedTypeface="@string/selected_text"
         app:np_value="18"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="years"
-        android:layout_marginTop="@dimen/_20sdp"
+        android:text="@string/years"
         android:fontFamily="@font/apompadour_text_sample"
         android:layout_marginStart="-60dp"
         android:textSize="@dimen/_14ssp"/>

@@ -42,5 +42,9 @@
     <string name="old">Old</string>
     <string name="_1_6">1 / 6</string>
     <string name="number_picker_formatter" />
-    <string name="apompadour_text_sample" />
+
+    <!--Font-->
+    <string name="selected_text">sans-serif-medium</string>
+    <string name="unselected_text">sans-serif-thin</string>
+    <string name="years">years</string>
 </resources>

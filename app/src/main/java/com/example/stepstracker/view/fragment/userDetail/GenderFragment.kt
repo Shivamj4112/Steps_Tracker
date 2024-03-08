@@ -31,14 +31,14 @@ class GenderFragment : Fragment() {
                 mcvMale.strokeColor = ContextCompat.getColor(requireContext(), R.color.app_color)
                 mcvFemale.strokeWidth = 0
 
-                viewDetailModel.gender.value = "Male"
+//                viewDetailModel.gender.value = "Male"
             }
 
             mcvFemale.setOnClickListener {
                 mcvFemale.strokeWidth = 7
                 mcvFemale.strokeColor = ContextCompat.getColor(requireContext(), R.color.app_color)
                 mcvMale.strokeWidth = 0
-                viewDetailModel.gender.value = "Female"
+//                viewDetailModel.gender.value = "Female"
             }
 
         }

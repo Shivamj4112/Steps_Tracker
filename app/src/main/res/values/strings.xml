@@ -46,5 +46,7 @@
     <string name="number_picker_formatter" />
 
     <!--Font-->
-    <string name="apompadour_text_sample">sans-serif-medium</string>
+    <string name="selected_text">sans-serif-medium</string>
+    <string name="unselected_text">sans-serif-condensed</string>
+    <string name="years">years</string>
 </resources>
