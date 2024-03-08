@@ -10,6 +10,7 @@ import com.example.stepstracker.view.fragment.intro.IntroScreen2Fragment
 import com.example.stepstracker.view.fragment.intro.IntroScreen3Fragment
 import com.example.stepstracker.view.fragment.userDetail.AgeFragment
 import com.example.stepstracker.view.fragment.userDetail.GenderFragment
+import com.example.stepstracker.view.fragment.userDetail.HeightFragment
 import com.example.stepstracker.view.fragment.userDetail.SedentaryFragment
 
 class DetailViewPager(fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity) {
@@ -22,6 +23,8 @@ class DetailViewPager(fragmentActivity: FragmentActivity) : FragmentStateAdapter
             0 -> GenderFragment()
             1 -> SedentaryFragment()
             2 -> AgeFragment()
+            3 -> HeightFragment()
+            4 -> HeightFragment()
             // Add cases for other fragments
             else -> GenderFragment() // Default case
         }

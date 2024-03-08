@@ -5,4 +5,5 @@
     <color name="titleTextColor">#FFFFFF</color>
     <color name="bodyTextColor">#C8C8C8</color>
     <color name="bg_white">#141218</color>
+    <color name="bg_button">#000000</color>
 </resources>

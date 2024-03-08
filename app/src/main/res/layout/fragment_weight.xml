@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".view.fragment.userDetail.HeightFragment">
+    tools:context=".view.fragment.userDetail.WeightFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,7 +23,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/height"
+            android:text="@string/weight"
             android:layout_marginStart="@dimen/_5sdp"
             android:textColor="@color/app_color"
             android:fontFamily="@font/apompadour_bold_sample"
@@ -43,7 +43,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="How tall are you?"
+        android:text="Share your weight with us."
         android:textColor="@color/bodyTextColor"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/_10sdp"/>
@@ -55,10 +55,10 @@
         android:layout_marginTop="@dimen/_20sdp">
 
         <Button
-            android:id="@+id/btCm"
+            android:id="@+id/btKg"
             android:layout_width="@dimen/_55sdp"
             android:layout_height="wrap_content"
-            android:text="@string/cm"
+            android:text="@string/kg"
             android:fontFamily="@font/apompadour_text_sample"
             android:textSize="@dimen/_14ssp"
             android:backgroundTint="@color/app_color"/>
@@ -68,10 +68,10 @@
             android:layout_height="match_parent"/>
 
         <Button
-            android:id="@+id/btFt"
+            android:id="@+id/btLbs"
             android:layout_width="@dimen/_55sdp"
             android:layout_height="wrap_content"
-            android:text="@string/ft"
+            android:text="@string/lbs"
             android:textColor="@color/black"
             android:fontFamily="@font/apompadour_text_sample"
             android:textSize="@dimen/_14ssp"
@@ -84,7 +84,7 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/llCm"
+            android:id="@+id/llKg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -92,14 +92,14 @@
             android:layout_marginTop="@dimen/_15sdp">
 
             <com.shawnlin.numberpicker.NumberPicker
-                android:id="@+id/npCm"
+                android:id="@+id/npKg"
                 android:layout_width="@dimen/_125sdp"
                 android:layout_height="@dimen/_400sdp"
                 app:np_width="64dp"
                 app:np_height="@dimen/_160sdp"
                 app:np_dividerColor="@color/app_color"
                 app:np_max="300"
-                app:np_min="50"
+                app:np_min="10"
                 app:np_dividerDistance="@dimen/_55sdp"
                 android:layout_gravity="center"
                 app:np_selectedTextColor="@color/app_color"
@@ -109,19 +109,19 @@
                 app:np_wheelItemCount="11"
                 app:np_typeface="@string/unselected_text"
                 app:np_selectedTypeface="@string/selected_text"
-                app:np_value="120"/>
+                app:np_value="40"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cm"
+                android:text="@string/kg"
                 android:fontFamily="@font/apompadour_text_sample"
                 android:layout_marginStart="-40dp"
                 android:textSize="@dimen/_14ssp"/>
 
         </LinearLayout>
         <LinearLayout
-            android:id="@+id/llFeet"
+            android:id="@+id/llLbs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -129,13 +129,13 @@
             android:layout_marginTop="@dimen/_20sdp">
 
             <com.shawnlin.numberpicker.NumberPicker
-                android:id="@+id/npFt"
+                android:id="@+id/npLbs"
                 android:layout_width="@dimen/_125sdp"
                 android:layout_height="@dimen/_400sdp"
                 app:np_width="64dp"
                 app:np_height="@dimen/_160sdp"
                 app:np_dividerColor="@color/app_color"
-                app:np_max="10"
+                app:np_max="1500"
                 app:np_min="1"
                 app:np_dividerDistance="@dimen/_55sdp"
                 android:layout_gravity="center"
@@ -146,12 +146,12 @@
                 app:np_wheelItemCount="11"
                 app:np_typeface="@string/unselected_text"
                 app:np_selectedTypeface="@string/selected_text"
-                app:np_value="5"/>
+                app:np_value="88"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/ft"
+                android:text="@string/lbs"
                 android:fontFamily="@font/apompadour_text_sample"
                 android:layout_marginStart="-40dp"
                 android:textSize="@dimen/_14ssp"/>
