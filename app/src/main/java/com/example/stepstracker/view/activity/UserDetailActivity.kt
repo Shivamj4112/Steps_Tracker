@@ -1,6 +1,7 @@
 package com.example.stepstracker.view.activity
 
 import android.annotation.SuppressLint
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
@@ -9,11 +10,14 @@ import com.example.stepstracker.adapter.DetailViewPager
 import com.example.stepstracker.databinding.ActivityUserDetailBinding
 import com.example.stepstracker.model.UserDetailModel
 import com.example.stepstracker.util.statusBarColorWhite
+import com.example.stepstracker.util.toast
 
 class UserDetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityUserDetailBinding
     private val model: UserDetailModel by viewModels()
+    private lateinit var sharedPref : SharedPreferences
+    private lateinit var editor : SharedPreferences.Editor
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +25,8 @@ class UserDetailActivity : AppCompatActivity() {
         setContentView(binding.root)
         statusBarColorWhite()
 
+        sharedPref = getSharedPreferences("UserDetail", MODE_PRIVATE)
+        editor = sharedPref.edit()
 
         binding.apply {
 
@@ -35,7 +41,7 @@ class UserDetailActivity : AppCompatActivity() {
             btPrevious.setOnClickListener {
                 if (userPager.currentItem > 0) {
                     userPager.currentItem -= 1
-                    tvNumIndicator.text = (""+(userPager.currentItem+1)+" / 6")
+                    tvNumIndicator.text = ("" + (userPager.currentItem + 1) + " / 6")
                 }
             }
             btContinue.setOnClickListener {
@@ -60,7 +66,10 @@ class UserDetailActivity : AppCompatActivity() {
                     tvNumIndicator.text = "${userPager.currentItem + 1} / 6"
                 } else if (isLastPage) {
 
-                    Toast.makeText(this@UserDetailActivity, model.gender, Toast.LENGTH_SHORT).show()
+                    toast("Your are Done!")
+
+                    editor.putBoolean("idDetailFilled",true)
+                    editor.apply()
                 } else {
                     checkDataEmpty()
                 }

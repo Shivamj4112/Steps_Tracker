@@ -31,9 +31,17 @@ class LoginSelectionActivity : AppCompatActivity() {
         sharedPreferences = getSharedPreferences("Login", MODE_PRIVATE)
         editor = sharedPreferences.edit()
 
+
         if (sharedPreferences.contains("Useruid")) {
             intentFinish(MainActivity::class.java)
         }
+        else if (sharedPreferences.contains("idDetailFilled")){
+            intentFinish(LoginActivity::class.java)
+        }
+        else if (sharedPreferences.contains("isAccountCreated")) {
+            intentFinish(UserDetailActivity::class.java)
+        }
+
 
 
         binding.apply {

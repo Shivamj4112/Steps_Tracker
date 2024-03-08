@@ -1,5 +1,6 @@
 package com.example.stepstracker.view.activity
 
+import android.content.SharedPreferences
 import android.graphics.Typeface
 import android.os.Bundle
 import android.text.InputType
@@ -26,6 +27,8 @@ class SignupActivity : AppCompatActivity() {
     private lateinit var auth : FirebaseAuth
     private val database = Firebase.database
     private val myRef = database.getReference("Users")
+    private lateinit var sharedPref : SharedPreferences
+    private lateinit var editor : SharedPreferences.Editor
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,13 +36,21 @@ class SignupActivity : AppCompatActivity() {
         setContentView(binding.root)
         statusBarColorWhite()
 
-        auth = Firebase.auth
+        initialization()
+
+
 
         binding.apply {
 
             buttonSignup()
             otherCLicks()
         }
+    }
+
+    private fun initialization() {
+        auth = Firebase.auth
+        sharedPref = getSharedPreferences("Signup", MODE_PRIVATE)
+        editor = sharedPref.edit()
     }
 
     private fun ActivitySignupBinding.otherCLicks() {
@@ -67,17 +78,23 @@ class SignupActivity : AppCompatActivity() {
             }
 
         }
+        passwordHideShow()
+    }
+
+    private fun ActivitySignupBinding.passwordHideShow() {
         var count = 0
         val customFont = ResourcesCompat.getFont(this@SignupActivity, R.font.apompadour_text_sample)
         ivPassShow.setOnClickListener {
             val cursorPosition = etPassword.selectionStart
             if (count == 0) {
-                etPassword.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+                etPassword.inputType =
+                    InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
                 etPassword.typeface = customFont
                 ivPassShow.setImageResource(R.drawable.ic_pass_show)
                 count = 1
             } else {
-                etPassword.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+                etPassword.inputType =
+                    InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
                 etPassword.typeface = customFont
                 ivPassShow.setImageResource(R.drawable.ic_pass_hide)
                 count = 0
@@ -99,6 +116,9 @@ class SignupActivity : AppCompatActivity() {
                     userRef.child("email").setValue(email)
 
                     intentFinish(UserDetailActivity::class.java)
+
+                    editor.putBoolean("isAccountCreated",true)
+                    editor.apply()
                 } else {
                     toast("Failed to create user")
                 }

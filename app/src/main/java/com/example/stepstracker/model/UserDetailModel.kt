@@ -7,7 +7,7 @@ class UserDetailModel : ViewModel(){
     var gender : String = ""
     var sedentary : String = ""
     var age : String = ""
-    val height : String = ""
-    val weight : String = ""
-    val step : String = ""
+    var height : String = ""
+    var weight : String = ""
+    var step : String = ""
 }

@@ -29,7 +29,7 @@ class HeightFragment : Fragment() {
 
         binding.apply {
 
-            model.age = npCm.value.toString() + " cm"
+            model.height = npCm.value.toString() + " cm"
 
             btCm.setOnClickListener {
 
@@ -42,7 +42,7 @@ class HeightFragment : Fragment() {
                 llCm.visible()
                 llFeet.gone()
 
-                model.age = npCm.value.toString() + " cm"
+                model.height = npCm.value.toString() + " cm"
 
             }
 
@@ -57,20 +57,20 @@ class HeightFragment : Fragment() {
                 llFeet.visible()
                 llCm.gone()
 
-                model.age = npFt.value.toString() + " ft"
+                model.height = npFt.value.toString() + " ft"
 
             }
 
             npCm.setOnScrollListener { picker, scrollState ->
                 if (scrollState == NumberPicker.OnScrollListener.SCROLL_STATE_IDLE) {
 
-                    model.age = npCm.value.toString() + " cm"
+                    model.height = npCm.value.toString() + " cm"
                 }
             }
 
             npFt.setOnScrollListener { picker, scrollState ->
                 if (scrollState == NumberPicker.OnScrollListener.SCROLL_STATE_IDLE) {
-                    model.age = npFt.value.toString() + " ft"
+                    model.height = npFt.value.toString() + " ft"
                 }
             }
 
