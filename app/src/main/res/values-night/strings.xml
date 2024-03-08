@@ -47,4 +47,7 @@
     <string name="selected_text">sans-serif-medium</string>
     <string name="unselected_text">sans-serif-thin</string>
     <string name="years">years</string>
+    <string name="height">Height</string>
+    <string name="questionmark">\?</string>
+    <string name="cm">cm</string>
 </resources>
