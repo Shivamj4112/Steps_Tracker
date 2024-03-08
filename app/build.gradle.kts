@@ -63,6 +63,10 @@ dependencies {
     // Dot Indicator
     implementation(libs.dotsindicator)
 
+    // Number Picker
     implementation(libs.number.picker)
+
+    // Share data with activity and frgament
+    implementation(libs.androidx.fragment.ktx)
 
 }

@@ -5,12 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import com.example.stepstracker.R
 import com.example.stepstracker.databinding.FragmentSedentaryBinding
+import com.example.stepstracker.model.UserDetailModel
 
 class SedentaryFragment : Fragment() {
 
     private lateinit var binding : FragmentSedentaryBinding
+    private val model : UserDetailModel by activityViewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -27,6 +30,8 @@ class SedentaryFragment : Fragment() {
 
                 btNo.setTextColor(resources.getColor(R.color.black))
                 btNo.setBackgroundColor(resources.getColor(R.color.lightest_app_color))
+                model.sedentary = "Yes"
+
             }
 
             btNo.setOnClickListener {
@@ -36,6 +41,7 @@ class SedentaryFragment : Fragment() {
 
                 btYes.setTextColor(resources.getColor(R.color.black))
                 btYes.setBackgroundColor(resources.getColor(R.color.lightest_app_color))
+                model.sedentary = "No"
             }
 
         }

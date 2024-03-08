@@ -110,7 +110,7 @@
                 app:np_wheelItemCount="11"
                 app:np_typeface="@string/unselected_text"
                 app:np_selectedTypeface="@string/selected_text"
-                app:np_value="120"/>
+                app:np_value="163"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -126,7 +126,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:visibility="gone"
+            android:visibility="visible"
             android:layout_marginVertical="@dimen/_20sdp">
 
             <com.shawnlin.numberpicker.NumberPicker
@@ -154,7 +154,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/ft"
                 android:fontFamily="@font/apompadour_text_sample"
-                android:layout_marginStart="-40dp"
+                android:layout_marginStart="-35dp"
                 android:textSize="@dimen/_14ssp"/>
 
         </LinearLayout>

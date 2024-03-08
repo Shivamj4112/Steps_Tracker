@@ -5,9 +5,11 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import com.example.stepstracker.databinding.FragmentAgeBinding
+import com.example.stepstracker.model.UserDetailModel
+import com.example.stepstracker.util.toast
 import com.shawnlin.numberpicker.NumberPicker
 import java.util.Locale
 
@@ -15,7 +17,7 @@ import java.util.Locale
 class AgeFragment : Fragment() {
 
     private lateinit var binding : FragmentAgeBinding
-    private val dividerValue = 28
+    private val model : UserDetailModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,21 +28,13 @@ class AgeFragment : Fragment() {
 
         binding.apply {
 
-//            var previousValue = -1 // Variable to store the previous value
-//
-//            numberPicker.setOnValueChangedListener { picker, oldVal, newVal ->
-//                if (newVal != previousValue) {
-//                    // Only handle the callback if the new value is different from the previous value
-//                    Toast.makeText(requireContext(), newVal.toString(), Toast.LENGTH_SHORT).show()
-//                    previousValue = newVal // Update the previous value
-//                }
-//            }
+            model.age = numberPicker.value.toString()
+
             numberPicker.setOnScrollListener { picker, scrollState ->
                 if (scrollState == NumberPicker.OnScrollListener.SCROLL_STATE_IDLE) {
-                    Toast.makeText(requireContext(), picker.value.toString(), Toast.LENGTH_SHORT).show()
+                    model.age =  picker.value.toString()
                 }
             }
-
         }
 
 

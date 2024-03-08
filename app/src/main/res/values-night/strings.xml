@@ -58,6 +58,7 @@
     <string name="choose_your_daily_step_goal_to_stay_motivated">Choose your daily step goal to stay motivated!</string>
     <string name="steps">steps</string>
     <string name="previous">Previous</string>
+    <string name="male">Male</string>
 
     <!--String Array-->
     <string-array name="stepsGoals">

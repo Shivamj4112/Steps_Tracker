@@ -5,14 +5,20 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.activityViewModels
 import com.example.stepstracker.R
 import com.example.stepstracker.databinding.FragmentHeightBinding
+import com.example.stepstracker.model.UserDetailModel
 import com.example.stepstracker.util.gone
+import com.example.stepstracker.util.toast
 import com.example.stepstracker.util.visible
+import com.shawnlin.numberpicker.NumberPicker
 
 class HeightFragment : Fragment() {
 
     private lateinit var binding : FragmentHeightBinding
+    private val model : UserDetailModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,6 +28,8 @@ class HeightFragment : Fragment() {
         binding = FragmentHeightBinding.inflate(layoutInflater)
 
         binding.apply {
+
+            model.age = npCm.value.toString() + " cm"
 
             btCm.setOnClickListener {
 
@@ -33,6 +41,9 @@ class HeightFragment : Fragment() {
 
                 llCm.visible()
                 llFeet.gone()
+
+                model.age = npCm.value.toString() + " cm"
+
             }
 
             btFt.setOnClickListener {
@@ -46,6 +57,21 @@ class HeightFragment : Fragment() {
                 llFeet.visible()
                 llCm.gone()
 
+                model.age = npFt.value.toString() + " ft"
+
+            }
+
+            npCm.setOnScrollListener { picker, scrollState ->
+                if (scrollState == NumberPicker.OnScrollListener.SCROLL_STATE_IDLE) {
+
+                    model.age = npCm.value.toString() + " cm"
+                }
+            }
+
+            npFt.setOnScrollListener { picker, scrollState ->
+                if (scrollState == NumberPicker.OnScrollListener.SCROLL_STATE_IDLE) {
+                    model.age = npFt.value.toString() + " ft"
+                }
             }
 
 
