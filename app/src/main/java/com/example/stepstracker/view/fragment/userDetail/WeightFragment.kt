@@ -45,7 +45,6 @@ class WeightFragment : Fragment() {
 
                 llLbs.visible()
                 llKg.gone()
-
             }
 
 
