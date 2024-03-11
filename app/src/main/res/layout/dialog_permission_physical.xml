@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:backgroundTint="@color/white"
+    app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:paddingVertical="15dp">
+
+        <ImageView
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_physical"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/apompadour_bold_sample"
+            android:text="@string/physical_dialog_title"
+            android:textAlignment="center"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textColor="@color/titleTextColor"
+            android:textSize="@dimen/_20ssp" />
+
+        <TextView
+            android:id="@+id/animationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/apompadour_text_sample"
+            android:text="@string/physical_dialog_body"
+            android:textAlignment="center"
+            android:lineSpacingExtra="@dimen/_6sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textSize="@dimen/_12ssp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/app_color"
+            android:fontFamily="@font/apompadour_bold_sample"
+            android:paddingVertical="@dimen/_15sdp"
+            android:text="@string/grant_permission"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textSize="@dimen/_12ssp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/lightest_app_color"
+            android:fontFamily="@font/apompadour_bold_sample"
+            android:paddingVertical="@dimen/_15sdp"
+            android:text="@string/cancel"
+            android:textColor="@color/app_color"
+            android:textSize="@dimen/_12ssp" />
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

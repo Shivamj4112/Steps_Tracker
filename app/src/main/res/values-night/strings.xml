@@ -59,5 +59,8 @@
     <string name="steps">steps</string>
     <string name="previous">Previous</string>
     <string name="male">Male</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="cancel">Cancel</string>
+    <string name="physical_dialog_title">Physical Activity Permission Request</string>
 
 </resources>
