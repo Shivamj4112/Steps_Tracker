@@ -9,6 +9,39 @@
     tools:context=".view.activity.MainActivity"
     android:background="@color/light_grey">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/ic_footsteps"
+            app:tint="@color/app_color"
+            android:rotation="350"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_gravity="center|start"/>
+
+        <TextView
+            android:id="@+id/titleFrag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home"
+            android:textColor="@color/titleTextColor"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_17ssp"
+            android:fontFamily="@font/apompadour_bold_sample"/>
+
+        <ImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/ic_more_vert"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_gravity="center|end"/>
+
+
+    </FrameLayout>
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"

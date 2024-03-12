@@ -68,5 +68,13 @@
     <string name="location_dialog_tilte">Location Access Permission Request</string>
     <string name="location_dialog_body">To track your routes and provide you with detailed route mapping. TrackFit requires access to your location.</string>
     <string name="home">Home</string>
+    <string name="account">Account</string>
+    <string name="track">Track</string>
+    <string name="report">Report</string>
+    <string name="history">History</string>
+    <string name="upgrade_plan_now">Upgrade Plan Now!</string>
+    <string name="enjoy_all_the_benefits_and_explore_more_possibilities">Enjoy all the benefits and explore more possibilities</string>
+    <string name="level_9">Level 9</string>
+    <string name="you_are_a_rising_star_keep_going">You are a rising star! Keep going!</string>
 
 </resources>

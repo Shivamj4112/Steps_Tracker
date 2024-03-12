@@ -49,18 +49,29 @@ class MainActivity : AppCompatActivity() {
 
             bubbleTabBar.addBubbleListener { id ->
                 when (id) {
-                    R.id.home -> viewPager.currentItem = 0
-                    R.id.location -> viewPager.currentItem = 1
-                    R.id.report -> viewPager.currentItem = 2
-                    R.id.history -> viewPager.currentItem = 3
-                    R.id.account -> viewPager.currentItem = 4
+                    R.id.home -> {
+                        titleFrag.text = getString(R.string.home)
+                        viewPager.currentItem = 0
+                    }
+                    R.id.location -> {
+                        titleFrag.text = getString(R.string.track)
+                        viewPager.currentItem = 1
+                    }
+                    R.id.report -> {
+                        titleFrag.text = getString(R.string.report)
+                        viewPager.currentItem = 2
+                    }
+                    R.id.history -> {
+                        titleFrag.text = getString(R.string.history)
+                        viewPager.currentItem = 3
+                    }
+                    R.id.account -> {
+                        titleFrag.text = getString(R.string.account)
+                        viewPager.currentItem = 4
+                    }
                 }
             }
-
-
         }
-
-
     }
 
     private fun requestPermission() {
