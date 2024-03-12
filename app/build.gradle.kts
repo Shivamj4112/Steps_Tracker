@@ -49,6 +49,7 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.database)
+    implementation(libs.play.services.fitness)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -69,4 +70,9 @@ dependencies {
     // Share data with activity and frgament
     implementation(libs.androidx.fragment.ktx)
 
+    // ArcSeekbar
+    implementation(libs.arcseekbar)
+
+    // Bottom Navigation
+    implementation(libs.bubbletabbar)
 }

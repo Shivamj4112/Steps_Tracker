@@ -33,6 +33,11 @@ fun Activity.statusBarColorWhite() {
     window.statusBarColor = getColor(R.color.bg_white)
 }
 
+fun Activity.statusBarColorGrey() {
+    window.statusBarColor = getColor(R.color.light_grey)
+}
+
+
 fun Activity.intentFinish(context: Class<*>) {
     startActivity(Intent(this@intentFinish, context))
     finish()

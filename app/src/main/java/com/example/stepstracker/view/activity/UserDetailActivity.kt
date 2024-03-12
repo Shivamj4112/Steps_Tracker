@@ -48,7 +48,10 @@ class UserDetailActivity : AppCompatActivity() {
         setContentView(binding.root)
         statusBarColorWhite()
 
-        initialization()
+        auth = Firebase.auth
+        sharedPref = getSharedPreferences("UserDetail", MODE_PRIVATE)
+        editor = sharedPref.edit()
+
         dialogAccountCreated()
 
 
@@ -101,11 +104,6 @@ class UserDetailActivity : AppCompatActivity() {
         }
     }
 
-    private fun initialization() {
-        auth = Firebase.auth
-        sharedPref = getSharedPreferences("UserDetail", MODE_PRIVATE)
-        editor = sharedPref.edit()
-    }
     private fun createAccountUsingEmail(){
 
         auth.createUserWithEmailAndPassword(email, password)

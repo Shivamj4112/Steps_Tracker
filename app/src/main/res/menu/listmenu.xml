@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/ic_home"
+            android:title="Home"
+            android:checked="true"
+            android:color="@color/home"/>
+
+        <item
+            android:id="@+id/location"
+            android:icon="@drawable/ic_location_outline"
+            android:title="Track"
+            android:color="#7B3CEA"/>
+
+        <item
+            android:id="@+id/report"
+            android:icon="@drawable/ic_report"
+            android:title="Report"
+            android:color="#3C8CE4"/>
+
+        <item
+            android:id="@+id/history"
+            android:icon="@drawable/ic_clock"
+            android:title="History"
+            android:color="#B68A03"/>
+
+        <item
+            android:id="@+id/account"
+            android:icon="@drawable/ic_user"
+            android:title="Account"
+            android:color="@color/settings"/>
+
+</menu>

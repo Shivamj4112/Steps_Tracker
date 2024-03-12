@@ -65,5 +65,8 @@
     <string name="cancel">Cancel</string>
     <string name="physical_dialog_body">TrackFit needs permission to access your physical activity data to accurately count your steps and monitor your progress.</string>
     <string name="physical_dialog_title">Physical Activity Permission Request</string>
+    <string name="location_dialog_tilte">Location Access Permission Request</string>
+    <string name="location_dialog_body">To track your routes and provide you with detailed route mapping. TrackFit requires access to your location.</string>
+    <string name="home">Home</string>
 
 </resources>

@@ -18,30 +18,31 @@
             android:layout_width="@dimen/_70sdp"
             android:layout_height="@dimen/_70sdp"
             android:layout_gravity="center"
-            android:src="@drawable/ic_physical"/>
+            android:src="@drawable/ic_location"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/apompadour_bold_sample"
-            android:text="@string/physical_dialog_title"
+            android:text="@string/location_dialog_tilte"
             android:textAlignment="center"
             android:layout_marginTop="@dimen/_20sdp"
-            android:textColor="@color/titleTextColor"
+            android:textColor="@color/black"
             android:textSize="@dimen/_20ssp" />
 
         <TextView
-            android:id="@+id/animationView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/apompadour_text_sample"
-            android:text="@string/physical_dialog_body"
+            android:text="@string/location_dialog_body"
             android:textAlignment="center"
             android:lineSpacingExtra="@dimen/_6sdp"
             android:layout_marginTop="@dimen/_20sdp"
-            android:textSize="@dimen/_12ssp" />
+            android:textColor="@color/bodyTextColor"
+            android:textSize="@dimen/_14ssp" />
 
         <Button
+            android:id="@+id/btGrantLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/app_color"
@@ -49,9 +50,11 @@
             android:paddingVertical="@dimen/_15sdp"
             android:text="@string/grant_permission"
             android:layout_marginTop="@dimen/_20sdp"
+            android:textColor="@color/white"
             android:textSize="@dimen/_12ssp" />
 
         <Button
+            android:id="@+id/btCancel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/lightest_app_color"
