@@ -48,7 +48,7 @@ class HomeFragment : Fragment() , SensorEventListener {
     override fun onResume() {
         super.onResume()
         running = true
-        val stepSensor = sensorManager?.getDefaultSensor(Sensor.TYPE_STEP_DETECTOR)
+        val stepSensor = sensorManager?.getDefaultSensor(Sensor.TYPE_STEP_COUNTER)
 
         if (stepSensor == null) {
             Toast.makeText(requireContext(), "No sensor detected on this device", Toast.LENGTH_SHORT).show()

@@ -18,7 +18,10 @@
         android:theme="@style/Theme.StepsTracker"
         tools:targetApi="31" >
         <activity
-            android:name=".view.activity.PlansActivity"
+            android:name=".view.activity.payments.ChoosePlansActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.payments.PlansActivity"
             android:exported="false" />
         <activity
             android:name=".view.activity.intro.UserDetailActivity"

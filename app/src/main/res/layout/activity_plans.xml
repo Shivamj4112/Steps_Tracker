@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/light_grey"
-    tools:context=".view.activity.PlansActivity">
+    tools:context=".view.activity.payments.PlansActivity">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -35,32 +35,72 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         android:layout_marginHorizontal="@dimen/_10sdp">
 
-        <TextView
-            android:id="@+id/tvMonthly"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:text="@string/monthly"
-            android:background="@drawable/bn_purple_item"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_12ssp"
-            android:fontFamily="@font/apompadour_bold_sample"
-            android:layout_height="@dimen/_30sdp"/>
 
-        <TextView
-            android:id="@+id/tvYearly"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:text="@string/yearly"
-            android:background="@drawable/bn_item"
-            android:gravity="center"
-            android:textSize="@dimen/_12ssp"
-            android:fontFamily="@font/apompadour_bold_sample"
-            android:layout_height="@dimen/_30sdp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvMonthly"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/monthly"
+                android:background="@drawable/bn_purple_item"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/apompadour_bold_sample"
+                android:layout_height="@dimen/_35sdp"/>
+
+            <TextView
+                android:id="@+id/tvYearly"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/yearly"
+                android:background="@drawable/bn_item"
+                android:gravity="center"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/default_text_color"
+                android:fontFamily="@font/apompadour_bold_sample"
+                android:layout_height="@dimen/_35sdp"/>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bn_item">
+
+                <ImageView
+                    android:id="@+id/ivPlans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_350sdp"
+                    android:src="@drawable/ic_plan_monthly"
+                    android:scaleType="fitXY"/>
+
+            </LinearLayout>
+        </ScrollView>
+        <Button
+            android:id="@+id/btContinuePayment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:text="@string/continue_4_99"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:backgroundTint="@color/app_color"/>
 
 
     </LinearLayout>
+
 
 </LinearLayout>

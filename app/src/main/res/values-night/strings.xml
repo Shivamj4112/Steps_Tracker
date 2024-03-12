@@ -84,5 +84,7 @@
     <string name="upgrade_plan">Upgrade Plan</string>
     <string name="monthly">Monthly</string>
     <string name="yearly">Yearly</string>
+    <string name="continue_4_99">Continue - $4.99</string>
+    <string name="continue_49_99">Continue - $49.99</string>
 
 </resources>

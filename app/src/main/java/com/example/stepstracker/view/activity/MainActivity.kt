@@ -5,14 +5,10 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.viewpager.widget.ViewPager
-import androidx.viewpager2.widget.ViewPager2
 import com.example.stepstracker.R
 import com.example.stepstracker.adapter.MainViewpager
 import com.example.stepstracker.databinding.ActivityMainBinding
 import com.example.stepstracker.util.statusBarColorGrey
-import com.example.stepstracker.view.fragment.main.HomeFragment
-import com.example.stepstracker.view.fragment.main.TrackFragment
-import io.ak1.OnBubbleClickListener
 
 class MainActivity : AppCompatActivity() {
 

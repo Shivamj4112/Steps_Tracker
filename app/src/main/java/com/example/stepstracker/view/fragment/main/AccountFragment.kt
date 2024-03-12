@@ -5,8 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.stepstracker.R
 import com.example.stepstracker.databinding.FragmentAccountBinding
+import com.example.stepstracker.util.intent
+import com.example.stepstracker.view.activity.payments.PlansActivity
 
 
 class AccountFragment : Fragment() {
@@ -22,7 +23,7 @@ class AccountFragment : Fragment() {
         binding.apply {
 
             llUpgradePlan.setOnClickListener {
-
+                requireActivity().intent(PlansActivity::class.java)
             }
         }
 
