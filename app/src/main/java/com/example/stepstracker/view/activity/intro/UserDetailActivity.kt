@@ -1,4 +1,4 @@
-package com.example.stepstracker.view.activity
+package com.example.stepstracker.view.activity.intro
 
 import android.annotation.SuppressLint
 import android.app.Dialog
@@ -10,8 +10,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.Gravity
 import android.view.WindowManager
-import android.widget.LinearLayout
-import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -21,6 +19,7 @@ import com.example.stepstracker.databinding.ActivityUserDetailBinding
 import com.example.stepstracker.model.UserDetailModel
 import com.example.stepstracker.util.statusBarColorWhite
 import com.example.stepstracker.util.toast
+import com.example.stepstracker.view.activity.auth.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference

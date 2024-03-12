@@ -1,4 +1,4 @@
-package com.example.stepstracker.view.activity
+package com.example.stepstracker.view.activity.intro
 
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -10,6 +10,7 @@ import com.example.stepstracker.adapter.IntroViewPager
 import com.example.stepstracker.databinding.ActivityIntroBinding
 import com.example.stepstracker.util.intentFinish
 import com.example.stepstracker.util.setSystemBarsAppearance
+import com.example.stepstracker.view.activity.auth.LoginSelectionActivity
 
 class IntroActivity : AppCompatActivity() {
 

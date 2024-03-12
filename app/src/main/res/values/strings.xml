@@ -76,5 +76,16 @@
     <string name="enjoy_all_the_benefits_and_explore_more_possibilities">Enjoy all the benefits and explore more possibilities</string>
     <string name="level_9">Level 9</string>
     <string name="you_are_a_rising_star_keep_going">You are a rising star! Keep going!</string>
+    <string name="water_tracker">Water Tracker</string>
+    <string name="weight_tracker">Weight Tracker</string>
+    <string name="preferences">Preferences</string>
+    <string name="personal_info">Personal Info</string>
+    <string name="payment_methods">Payment Methods</string>
+    <string name="billing_amp_subscriptions"><![CDATA[Billing & Subscriptions]]></string>
+    <string name="account_amp_security"><![CDATA[Account & Security]]></string>
+    <string name="choose_payment_methods">Choose Payment Methods</string>
+    <string name="upgrade_plan">Upgrade Plan</string>
+    <string name="monthly">Monthly</string>
+    <string name="yearly">Yearly</string>
 
 </resources>

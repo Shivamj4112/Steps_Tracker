@@ -1,20 +1,14 @@
-package com.example.stepstracker.view.activity
+package com.example.stepstracker.view.activity.auth
 
 import android.content.SharedPreferences
-import android.graphics.Color
 import android.os.Bundle
-import android.view.View
-import androidx.activity.enableEdgeToEdge
-import androidx.annotation.ColorRes
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.stepstracker.R
 import com.example.stepstracker.databinding.ActivityLoginSelectionBinding
 import com.example.stepstracker.util.intent
 import com.example.stepstracker.util.intentFinish
-import com.example.stepstracker.util.setSystemBarsAppearance
 import com.example.stepstracker.util.statusBarColorWhite
+import com.example.stepstracker.view.activity.MainActivity
+import com.example.stepstracker.view.activity.intro.UserDetailActivity
 
 class LoginSelectionActivity : AppCompatActivity() {
 

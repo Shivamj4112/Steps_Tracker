@@ -1,4 +1,4 @@
-package com.example.stepstracker.view.activity
+package com.example.stepstracker.view.activity.auth
 
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -12,9 +12,9 @@ import com.example.stepstracker.util.intentFinish
 import com.example.stepstracker.util.statusBarColorWhite
 import com.example.stepstracker.util.toast
 import com.example.stepstracker.util.visible
+import com.example.stepstracker.view.activity.MainActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 class LoginActivity : AppCompatActivity() {

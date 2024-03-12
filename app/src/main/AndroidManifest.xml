@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools" >
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION"/>
-
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
 
     <application
         android:allowBackup="true"
@@ -17,42 +16,44 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.StepsTracker"
-        tools:targetApi="31">
+        tools:targetApi="31" >
         <activity
-            android:name=".view.activity.UserDetailActivity"
-            android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:name=".view.activity.PlansActivity"
+            android:exported="false" />
         <activity
-            android:name=".view.activity.SignupActivity"
+            android:name=".view.activity.intro.UserDetailActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".view.activity.LoginActivity"
+            android:name=".view.activity.auth.SignupActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".view.activity.LoginSelectionActivity"
+            android:name=".view.activity.auth.LoginActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".view.activity.IntroActivity"
+            android:name=".view.activity.auth.LoginSelectionActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".view.activity.SplashActivity"
+            android:name=".view.activity.intro.IntroActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.intro.SplashActivity"
             android:exported="true"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".view.activity.MainActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

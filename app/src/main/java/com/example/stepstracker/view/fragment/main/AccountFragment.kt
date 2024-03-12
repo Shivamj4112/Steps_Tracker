@@ -19,7 +19,12 @@ class AccountFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentAccountBinding.inflate(layoutInflater)
 
+        binding.apply {
 
+            llUpgradePlan.setOnClickListener {
+
+            }
+        }
 
 
         return binding.root

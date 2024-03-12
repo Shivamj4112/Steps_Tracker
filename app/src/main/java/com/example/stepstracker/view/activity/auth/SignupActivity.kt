@@ -1,6 +1,5 @@
-package com.example.stepstracker.view.activity
+package com.example.stepstracker.view.activity.auth
 
-import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.text.InputType
@@ -11,6 +10,7 @@ import com.example.stepstracker.databinding.ActivitySignupBinding
 import com.example.stepstracker.util.intentFinish
 import com.example.stepstracker.util.statusBarColorWhite
 import com.example.stepstracker.util.toast
+import com.example.stepstracker.view.activity.intro.UserDetailActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
