@@ -13,6 +13,7 @@
         android:layout_height="?actionBarSize">
 
         <ImageView
+            android:id="@+id/ivBack"
             android:layout_width="@dimen/_24sdp"
             android:layout_height="@dimen/_24sdp"
             android:src="@drawable/ic_arrow_back"
@@ -23,11 +24,20 @@
             android:id="@+id/titleFrag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Choose Payment Methods"
+            android:text="@string/choose_payment_methods"
             android:textColor="@color/titleTextColor"
             android:layout_gravity="center"
             android:textSize="@dimen/_17ssp"
             android:fontFamily="@font/apompadour_bold_sample"/>
+
+        <ImageView
+            android:id="@+id/ivAddPayment"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/ic_add"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_gravity="center|end"/>
+
 
     </FrameLayout>
 
