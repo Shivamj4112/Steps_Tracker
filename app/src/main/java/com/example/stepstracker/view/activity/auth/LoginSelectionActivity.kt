@@ -20,20 +20,20 @@ class LoginSelectionActivity : AppCompatActivity() {
 
         statusBarColorWhite()
 
-        val sharedPreferencesLogin: SharedPreferences = getSharedPreferences("Login", MODE_PRIVATE)
-        val sharedPreferencesSignUp: SharedPreferences = getSharedPreferences("Signup", MODE_PRIVATE)
-        val sharedPreferencesDetail: SharedPreferences = getSharedPreferences("UserDetail", MODE_PRIVATE)
+            val sharedPreferencesLogin: SharedPreferences = getSharedPreferences("Login", MODE_PRIVATE)
+            val sharedPreferencesSignUp: SharedPreferences = getSharedPreferences("Signup", MODE_PRIVATE)
+            val sharedPreferencesDetail: SharedPreferences = getSharedPreferences("UserDetail", MODE_PRIVATE)
 
 
-        if (sharedPreferencesLogin.contains("Useruid")) {
-            intentFinish(MainActivity::class.java)
-        }
-        else if (sharedPreferencesDetail.contains("idDetailFilled")){
-            intentFinish(LoginActivity::class.java)
-        }
-        else if (sharedPreferencesSignUp.contains("isAccountCreated")) {
-            intentFinish(UserDetailActivity::class.java)
-        }
+            if (sharedPreferencesLogin.contains("Useruid")) {
+                intentFinish(MainActivity::class.java)
+            }
+            else if (sharedPreferencesDetail.contains("idDetailFilled")){
+                intentFinish(LoginActivity::class.java)
+            }
+            else if (sharedPreferencesSignUp.contains("isAccountCreated")) {
+                intentFinish(UserDetailActivity::class.java)
+            }
 
 
 
